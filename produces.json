@@ -1,0 +1,446 @@
+{
+	"2018": {
+		"nation": {
+			"1~2": {
+				"produce": 441.8,
+				"increase": -5
+			},
+			"3": {
+				"produce": 270.2,
+				"increase": 0.9
+			},
+			"4": {
+				"produce": 245,
+				"increase": 10.8
+			},
+			"5": {
+				"produce": 238.8,
+				"increase": 9.5
+			},
+			"6": {
+				"produce": 233.9,
+				"increase": 5.3
+			},
+			"7": {
+				"produce": 206.4,
+				"increase": -0.5
+			},
+			"8": {
+				"produce": 203.2,
+				"increase": -4.4
+			},
+			"9": {
+				"produce": 242.6,
+				"increase": -10.6
+			},
+			"10": {
+				"produce": 237,
+				"increase": -9.2
+			},
+			"11": {
+				"produce": 258.2,
+				"increase": -16.7
+			},
+			"12": {
+				"produce": 252.6,
+				"increase": -14.9
+			}
+		},
+		"province": {
+			"广东": {
+				"produce": 153.6,
+				"increase": 3.57
+			},
+			"上海": {
+				"produce": 151.95,
+				"increase": 12.84 
+			},
+			"吉林": {
+				"produce": 135.34,
+				"increase": 5.07
+			},
+			"湖北": {
+				"produce": 125.28,
+				"increase": -0.8
+			},
+			"广西": {
+				"produce": 116.8,
+				"increase": 0.24
+			},
+			"重庆": {
+				"produce": 102.77,
+				"increase": -26.3
+			},
+			"北京": {
+				"produce": 84.21,
+				"increase": -10.15
+			},
+			"江苏": {
+				"produce": 61.45,
+				"increase": -5.37
+			},
+			"浙江": {
+				"produce": 58.13,
+				"increase": 64.28
+			},
+			"安徽": {
+				"produce": 55.67,
+				"increase": -10.27
+			},
+			"山东": {
+				"produce": 55.12,
+				"increase": 24.28
+			},
+			"河北": {
+				"produce": 54.36,
+				"increase": -6.42
+			},
+			"辽宁": {
+				"produce": 46.37,
+				"increase": 7.51
+			},
+			"四川": {
+				"produce": 39.54,
+				"increase": 4.73
+			},
+			"天津": {
+				"produce": 39.01,
+				"increase": 46.04
+			},
+			"陕西": {
+				"produce": 31.21,
+				"increase": 5.55
+			},
+			"河南": {
+				"produce": 28.21,
+				"increase": 39.06
+			},
+			"江西": {
+				"produce": 26.82,
+				"increase": -4.57
+			},
+			"湖南": {
+				"produce": 26.19,
+				"increase": -2.94
+			},
+			"福建": {
+				"produce": 13.64,
+				"increase": 5.68
+			},
+			"黑龙江": {
+				"produce": 7.96,
+				"increase": 46.97
+			},
+			"山西": {
+				"produce": 6.68,
+				"increase": 167.94
+			},
+			"云南": {
+				"produce": 5.05,
+				"increase": 11.44
+			},
+			"海南": {
+				"produce": 1.26,
+				"increase": -43.3
+			},
+			"甘肃": {
+				"produce": 1.12,
+				"increase": 16.57
+			},
+			"内蒙古": {
+				"produce": 1.07,
+				"increase": -21.03
+			},
+			"新疆区": {
+				"produce": 1.02,
+				"increase": -3.37
+			},
+			"贵州": {
+				"produce": 0.14,
+				"increase": -76.75
+			}
+		},
+		"type": {
+			"1": {
+				"轿车": {
+					"produce": 109.61,
+					"ratio": 40.77,
+					"increase": 10.75
+				},
+				"MPV": {
+					"produce": 17.60,
+					"ratio": 6.55,
+					"increase": -5.17
+				},
+				"SUV": {
+					"produce": 102.87,
+					"ratio": 38.27,
+					"increase": 21.99
+                },
+                "交叉型乘用车": {
+                    "produce": 2.98,
+                    "ratio": 1.11,
+                    "increase": -43.75
+                }
+			},
+			"2": {
+				"轿车": {
+					"produce": 65.27,
+					"ratio": 38.27,
+					"increase": -26.02 
+				},
+				"MPV": {
+					"produce": 11.74,
+					"ratio": 6.88,
+					"increase": -29.40
+				},
+				"SUV": {
+					"produce": 64.47,
+					"ratio": 37.80,
+					"increase": -15.00 
+                },
+                "交叉型乘用车": {
+                    "produce": 2.45,
+                    "ratio": 1.44,
+                    "increase": -39.21
+                }
+			},
+			"3": {
+				"轿车": {
+					"produce": 99.45,
+					"ratio": 37.84,
+					"increase": -4.46
+				},
+				"MPV": {
+					"produce": 16.94,
+					"ratio": 6.44,
+					"increase": -16.39
+				},
+				"SUV": {
+					"produce": 99.84,
+					"ratio": 37.98,
+					"increase": 11.82
+                },
+                "交叉型乘用车": {
+                    "produce": 3.68,
+                    "ratio": 1.40,
+                    "increase": -28.68
+                }
+			},
+			"4": {
+				"轿车": {
+					"produce": 95.47,
+					"ratio": 39.82,
+					"increase": 12.34
+				},
+				"MPV": {
+					"produce": 13.73,
+					"ratio": 5.73,
+					"increase": -7.91
+				},
+				"SUV": {
+					"produce": 86.81,
+					"ratio": 36.21,
+					"increase": 18.30
+                },
+                "交叉型乘用车": {
+                    "produce": 3.97,
+                    "ratio": 1.66,
+                    "increase": -20.76
+                }
+			},
+			"5": {
+				"轿车": {
+					"produce": 98.77,
+					"ratio": 42.13,
+					"increase": 18.09
+				},
+				"MPV": {
+					"produce": 13.21,
+					"ratio": 5.63,
+					"increase": -18.86
+				},
+				"SUV": {
+					"produce": 78.54,
+					"ratio": 33.50,
+					"increase": 11.80
+                },
+                "交叉型乘用车": {
+                    "produce": 4.90,
+                    "ratio": 2.09,
+                    "increase": 6.52 
+                }
+			},
+			"6": {
+				"轿车": {
+					"produce": 97.53,
+					"ratio": 42.60,
+					"increase": 8.83
+				},
+				"MPV": {
+					"produce": 12.57,
+					"ratio": 5.49,
+					"increase": -25.40
+				},
+				"SUV": {
+					"produce": 79.42,
+					"ratio": 34.69,
+					"increase": 7.54
+                },
+                "交叉型乘用车": {
+                    "produce": 3.56,
+                    "ratio": 1.55,
+                    "increase": -14.42
+                }
+			},
+			"7": {
+				"轿车": {
+					"produce": 86.90,
+					"ratio": 42.54,
+					"increase": -1.94
+				},
+				"MPV": {
+					"produce": 11.92,
+					"ratio": 5.82,
+					"increase": -18.28
+				},
+				"SUV": {
+					"produce": 69.83,
+					"ratio": 34.17,
+					"increase": 0.00
+                },
+                "交叉型乘用车": {
+                    "produce": 3.88,
+                    "ratio": 1.91,
+                    "increase": 37.25
+                }
+			},
+			"8": {
+				"轿车": {
+					"produce": 85.97,
+					"ratio": 42.99,
+					"increase": -3.26
+				},
+				"MPV": {
+					"produce": 11.15,
+					"ratio": 5.58,
+					"increase": -11.35
+				},
+				"SUV": {
+					"produce": 70.14,
+					"ratio": 35.07,
+					"increase": -5.29
+                },
+                "交叉型乘用车": {
+                    "produce": 3.26,
+                    "ratio": 1.63,
+                    "increase": -5.52
+                }
+			},
+			"9": {
+				"轿车": {
+					"produce": 101.54,
+					"ratio": 43.09,
+					"increase": -9.62
+				},
+				"MPV": {
+					"produce": 14.84,
+					"ratio": 6.30,
+					"increase": -7.77
+				},
+				"SUV": {
+					"produce": 82.61,
+					"ratio": 35.06,
+					"increase": -14.38
+                },
+                "交叉型乘用车": {
+                    "produce": 3.49,
+                    "ratio": 1.48,
+                    "increase": -27.27
+                }
+			},
+			"10": {
+				"轿车": {
+					"produce": 98.96,
+					"ratio": 42.39,
+					"increase": -5.79
+				},
+				"MPV": {
+					"produce": 12.80,
+					"ratio": 5.48,
+					"increase": -28.70
+				},
+				"SUV": {
+					"produce": 85.52,
+					"ratio": 36.63,
+					"increase": -10.34
+                },
+                "交叉型乘用车": {
+                    "produce": 2.95,
+                    "ratio": 1.26,
+                    "increase": -10.34
+                }
+			},
+			"11": {
+				"轿车": {
+					"produce": 105.24,
+					"ratio": 42.12,
+					"increase": -16.74
+				},
+				"MPV": {
+					"produce": 14.48,
+					"ratio": 5.80,
+					"increase": -33.87
+				},
+				"SUV": {
+					"produce": 89.66,
+					"ratio": 35.89,
+					"increase": -21.10
+                },
+                "交叉型乘用车": {
+                    "produce": 2.91,
+                    "ratio": 1.16,
+                    "increase": -41.49
+                }
+			},
+			"12": {
+				"轿车": {
+					"produce": 100.95,
+					"ratio": 40.76,
+					"increase": -17.93
+				},
+				"MPV": {
+					"produce": 16.77,
+					"ratio": 6.76,
+					"increase": -15.87
+				},
+				"SUV": {
+					"produce": 83.53,
+					"ratio": 33.65,
+					"increase": -26.38
+                },
+                "交叉型乘用车": {
+                    "produce": 4.21,
+                    "ratio": 1.71,
+                    "increase": -7.69
+                }
+			}
+		}	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
