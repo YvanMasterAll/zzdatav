@@ -53,7 +53,7 @@ function chart_init() {
             }
         },
         grid: {
-            left: '0%',
+            left: '5%',
             right: '5%',
             bottom: '5%',
             containLabel: true,

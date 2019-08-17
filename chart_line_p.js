@@ -39,10 +39,10 @@ function chart_init() {
             }
         },
         grid: {
-            left: '0%',
+            left: '5%',
             right: '5%',
             bottom: '5%',
-            containLabel: true,
+            containLabel: true, // 防标签溢出
             show: false // 网格边框是否显示, 上和右边框 
         },
         // toolbox: {  
