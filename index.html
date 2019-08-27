@@ -8,45 +8,86 @@
         />
         <link rel="stylesheet" href="chart_table_t.css">
         <style>
-            .wrapper {
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-            }
-            .content {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                background-color: #020b3b;
-            }
-            .content > .left {
-                flex: 1;
-            }
-            .content > .center {
-                flex: 3;
-            }
-            .content > .right {
-                flex: 1;
-            }
-            .chart {
-                width: 100%;
-                height: 100%;
-            }
+            .wrapper { width: 100%; height: 100%; overflow: hidden; }
+            .content { width: 100%; height: 100%; display: flex; flex-direction: column; background-color: #020b3b; }
+            .content > .title { height: 60px; margin-bottom: 10px; }
+            .body { flex: 1; display: flex; flex-direction: row; }
+            .body > .space { flex: 0; }
+            .body > .left { flex: 12; background-color: red; display: flex; flex-direction: column; }
+            .body > .left > .top { flex: 16; background-color: bisque; display: flex; }
+            .body > .left > .bottom { flex: 8; background-color: blueviolet; display: flex; }
+            .body > .left > .bottom > .left { flex: 12; display: flex; }
+            .body > .left > .bottom > .right { flex: 12; display: flex; }
+            .body > .center { flex: 0; }
+            .body > .right { flex: 12; background-color: blue; display: flex; flex-direction: column; }
+            .body > .right > .top { flex: 8; background-color: rgb(35, 147, 175); display: flex; }
+            .body > .right > .top > .left { display: flex; flex: 1; }
+            .body > .right > .top > .right { display: flex; flex: 1; }
+            .body > .right > .middle { flex: 0; background-color: rgb(185, 27, 151); display: flex; }
+            .body > .right > .bottom { flex: 16; background-color: rgb(140, 80, 196); display: flex; }
+            .body > .right > .bottom > .left { flex: 12; display: flex; }
+            .body > .right > .bottom > .right { flex: 12; display: flex; }
+            .chart { width: 100%; height: 100%; }
+            .chart-pie-a { display: flex; }
+            .chart-pie-a > div { flex: 12;  display: flex; }
         </style>
     </head>
     <body>
         <div class="wrapper">
             <div class="content">
-                <div class="left"></div>
-                <div class="center">
-                    <!-- <div id="chart-map" class="chart"></div> -->
-                    <!-- <div id="chart-line-p" class="chart"></div> -->
-                    <!-- <div id="chart-line-t" class="chart"></div> -->
-                    <!-- <div id="chart-pie-b" class="chart"></div> -->
-                    <div id="chart-table-t" class="chart"></div>
+                <div class="title"></div>
+                <div class="body">
+                    <div class="space"></div>
+                    <div class="left">
+                        <div class="top">
+                            <div id="chart-map" class="chart"></div>
+                        </div>
+                        <div class="bottom">
+                            <div class="left">
+                                <div id="chart-line-t" class="chart"></div>
+                            </div>
+                            <div class="right">
+                                <div id="chart-line-p" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <!-- <div id="chart-map" class="chart"></div> -->
+                        <!-- <div id="chart-line-p" class="chart"></div> -->
+                        <!-- <div id="chart-line-t" class="chart"></div> -->
+                        <!-- <div id="chart-pie-b" class="chart"></div> -->
+                        <!-- <div id="chart-table-t" class="chart"></div> -->
+                        <!-- <div class="chart chart-pie-a">
+                            <div id="chart-pie-a-left"></div>
+                            <div id="chart-pie-a-right"></div>
+                        </div> -->
+                        <!-- <div id="chart-radar" class="chart"></div> -->
+                        <!-- <div id="chart-dash" class="chart"></div> -->
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <div class="left">
+                                <div id="chart-pie-b" class="chart"></div>
+                            </div>
+                            <div class="right">
+                                <div class="chart chart-pie-a">
+                                    <div id="chart-pie-a-left"></div>
+                                    <div id="chart-pie-a-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="middle"></div>
+                        <div class="bottom">
+                            <div class="left">
+                                <div id="chart-radar" class="chart"></div>
+                            </div>
+                            <div class="right">
+                                <div id="chart-table-t" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
                 </div>
-                <div class="right"></div>
             </div>
         </div>
 
@@ -80,10 +121,13 @@
 
         <script></script>
 
-        <!-- <script src="chart_map.js"></script> -->
-        <!-- <script src="chart_line_p.js"></script> -->
-        <!-- <script src="chart_line_t.js"></script> -->
-        <!-- <script src="chart_pie_b.js"></script> -->
+        <script src="chart_map.js"></script>
+        <script src="chart_line_p.js"></script>
+        <script src="chart_line_t.js"></script>
+        <script src="chart_pie_b.js"></script>
+        <script src="chart_pie_a.js"></script>
         <script src="chart_table_t.js"></script>
+        <script src="chart_radar.js"></script>
+        <!-- <script src="chart_dash.js"></script> -->
     </body>
 </html>
