@@ -9,45 +9,78 @@
         <link rel="stylesheet" href="chart_table_t.css">
         <style>
             .wrapper { width: 100%; height: 100%; overflow: hidden; }
-            .content { width: 100%; height: 100%; display: flex; flex-direction: column; background-color: #020b3b; }
-            .content > .title { height: 60px; margin-bottom: 10px; }
+            .content { width: 100%; height: 100%; display: flex; flex-direction: column; background-color: #020b3b; background: url(bg01.png) center no-repeat; }
+            .content > .title { height: 60px; margin-bottom: 10px; background: url(header.png) center no-repeat; text-align: center;}
+            .content > .title > span { line-height: 50px; font-size: 20px; display: inline-block; background-image: -webkit-gradient(linear,37.219838% 34.532506%,37.425669% 93.178216%,from(white),to(#6becd7),color-stop(.37,#6becd7)); -webkit-text-fill-color: transparent; -webkit-background-clip:text; color: #4097e5; }
             .body { flex: 1; display: flex; flex-direction: row; }
             .body > .space { flex: 0; }
-            .body > .left { flex: 12; background-color: red; display: flex; flex-direction: column; }
-            .body > .left > .top { flex: 16; background-color: bisque; display: flex; }
-            .body > .left > .bottom { flex: 8; background-color: blueviolet; display: flex; }
-            .body > .left > .bottom > .left { flex: 12; display: flex; }
-            .body > .left > .bottom > .right { flex: 12; display: flex; }
+            .body > .left { flex: 12; display: flex; flex-direction: column; }
+            .body > .left > .top { flex: 16; display: flex; }
+            .body > .left > .bottom { flex: 8; display: flex; }
+            .body > .left > .bottom > .chart-container .left { flex: 12; display: flex; }
+            .body > .left > .bottom > .chart-container .right { flex: 12; display: flex; }
             .body > .center { flex: 0; }
-            .body > .right { flex: 12; background-color: blue; display: flex; flex-direction: column; }
-            .body > .right > .top { flex: 8; background-color: rgb(35, 147, 175); display: flex; }
-            .body > .right > .top > .left { display: flex; flex: 1; }
-            .body > .right > .top > .right { display: flex; flex: 1; }
-            .body > .right > .middle { flex: 0; background-color: rgb(185, 27, 151); display: flex; }
-            .body > .right > .bottom { flex: 16; background-color: rgb(140, 80, 196); display: flex; }
-            .body > .right > .bottom > .left { flex: 12; display: flex; }
-            .body > .right > .bottom > .right { flex: 12; display: flex; }
-            .chart { width: 100%; height: 100%; }
+            .body > .right { flex: 12; display: flex; flex-direction: column; }
+            .body > .right > .top { flex: 8; display: flex; }
+            .body > .right > .top > .chart-container .left { display: flex; flex: 1; }
+            .body > .right > .top > .chart-container .right { display: flex; flex: 1; }
+            .body > .right > .middle { flex: 0; display: flex; }
+            .body > .right > .bottom { flex: 16; display: flex; }
+            .body > .right > .bottom > .chart-container .left { flex: 12; display: flex; }
+            .body > .right > .bottom > .chart-container .right { flex: 12; display: flex; }
+            .chart, .chart-container { width: 100%; height: 100%; }
             .chart-pie-a { display: flex; }
             .chart-pie-a > div { flex: 12;  display: flex; }
+            .chart-wrapper { position: relative; padding: 10px; box-sizing: border-box; }
+            .chart-container { position: relative; display: flex; border: 1px solid rgba(255, 255, 255, 0.1); box-sizing: border-box; border-radius: 4px; flex-direction: column; }
+            .chart-content { position: relative; display: flex; flex: 1; }
+            .chart-container .title { text-align: center; }
+            .chart-container .title > span { font-size: 15px; display: inline-block; padding: 8px 40px; border: 1px solid #4097e5; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-shadow: 0 0 2px #4097e5, 0 0 4px cyan, 0 0 10px dodgerblue, 0 0 80px blue; color: white; filter: saturate(60%); }
+            /* 边角样式 */
+            .corner { position: absolute; width: 30px; height: 30px; }
+            .corner::after { content: ""; position: absolute; width: 16px; height: 16px; }
+            .corner.rt { right: -1px; top: -1px; border-right: 1px solid rgba(255, 255, 255, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.2); border-top-right-radius: 4px; }
+            .corner.rt::after { top: -1px; right: -1px; border-right: 2px solid #4097e5; border-top: 2px solid #4097e5; border-top-right-radius: 4px; }
+            .corner.rb { right: -1px; bottom: -1px; border-right: 1px solid rgba(255, 255, 255, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.2); border-bottom-right-radius: 4px; }
+            .corner.rb::after { bottom: -1px; right: -1px; border-right: 2px solid #4097e5; border-bottom: 2px solid #4097e5; border-bottom-right-radius: 4px; }
+            .corner.lt { left: -1px; top: -1px; border-left: 1px solid rgba(255, 255, 255, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.2); border-top-left-radius: 4px; }
+            .corner.lt::after { top: -1px; left: -1px; border-left: 2px solid #4097e5; border-top: 2px solid #4097e5; border-top-left-radius: 4px; }
+            .corner.lb { left: -1px; bottom: -1px; border-left: 1px solid rgba(255, 255, 255, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.2); border-bottom-left-radius: 4px; }
+            .corner.lb::after { left: -1px; bottom: -1px; border-left: 2px solid #4097e5; border-bottom: 2px solid #4097e5; border-bottom-left-radius: 4px; }
         </style>
     </head>
     <body>
         <div class="wrapper">
             <div class="content">
-                <div class="title"></div>
+                <div class="title">
+                    <span>2018国内汽车行业概况</span>
+                </div>
                 <div class="body">
                     <div class="space"></div>
                     <div class="left">
-                        <div class="top">
-                            <div id="chart-map" class="chart"></div>
-                        </div>
-                        <div class="bottom">
-                            <div class="left">
-                                <div id="chart-line-t" class="chart"></div>
+                        <div class="top chart-wrapper">
+                            <div class='chart-container' style="flex-direction: column;">
+                                <div class="title">
+                                    <span>2018国内各省汽车产量</span>
+                                </div>
+                                <div class="chart-content">
+                                    <div id="chart-map" class="chart"></div>
+                                </div>
                             </div>
-                            <div class="right">
-                                <div id="chart-line-p" class="chart"></div>
+                        </div>
+                        <div class="bottom chart-wrapper">
+                            <div class='chart-container'>
+                                <div class="title">
+                                    <span>2018国内汽车产量情况</span>
+                                </div>
+                                <div class="chart-content">
+                                    <div class="left">
+                                        <div id="chart-line-t" class="chart"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div id="chart-line-p" class="chart"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -65,24 +98,38 @@
                         <!-- <div id="chart-dash" class="chart"></div> -->
                     </div>
                     <div class="right">
-                        <div class="top">
-                            <div class="left">
-                                <div id="chart-pie-b" class="chart"></div>
-                            </div>
-                            <div class="right">
-                                <div class="chart chart-pie-a">
-                                    <div id="chart-pie-a-left"></div>
-                                    <div id="chart-pie-a-right"></div>
+                        <div class="top chart-wrapper">
+                            <div class='chart-container'>
+                                <div class="title">
+                                    <span>2018国内汽车销量情况</span>
+                                </div>
+                                <div class="chart-content">
+                                    <div class="left">
+                                        <div id="chart-pie-b" class="chart"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="chart chart-pie-a">
+                                            <div id="chart-pie-a-left"></div>
+                                            <div id="chart-pie-a-right"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="middle"></div>
-                        <div class="bottom">
-                            <div class="left">
-                                <div id="chart-radar" class="chart"></div>
-                            </div>
-                            <div class="right">
-                                <div id="chart-table-t" class="chart"></div>
+                        <div class="bottom chart-wrapper">
+                            <div class="chart-container">
+                                <div class="title">
+                                    <span>2018国内汽车服务满意度</span>
+                                </div>
+                                <div class="chart-content">
+                                    <div class="left">
+                                        <div id="chart-radar" class="chart"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div id="chart-table-t" class="chart"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,6 +164,8 @@
             yvan.acolor_y = 'yellow' // 辅色黄色
             yvan.acolor_y800 = '#e79430' // 辅色橘黄色
             yvan.acolor_o = '#e56966' // 辅色橙色
+            // 添加边角样式
+            $('.chart-container').append($('<div class="corner rt"></div><div class="corner rb"></div><div class="corner lt"></div><div class="corner lb"></div>'))
         </script>
 
         <script></script>
